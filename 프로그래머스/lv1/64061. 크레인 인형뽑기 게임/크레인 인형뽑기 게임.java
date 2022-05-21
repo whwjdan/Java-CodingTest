@@ -13,11 +13,11 @@ class Solution {
             for(int j=0; j<board.length; j++){
                 if(board[j][move-1] != 0){
                     
-                    if(!baguni.isEmpty() && baguni.peek() == board[j][move-1]){
+                    if(!baguni.empty() && baguni.peek() == board[j][move-1]){
                         answer+=2;
                         baguni.pop();
                     } else{
-                        baguni.add(board[j][move-1]);    
+                        baguni.push(board[j][move-1]);    
                     }
                     
                     board[j][move-1] = 0;
